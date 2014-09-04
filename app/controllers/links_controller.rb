@@ -10,7 +10,9 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)
+    redirect_to action: 'index' unless @link.valid?
     @link.save
+
   end
 
   private
