@@ -1,0 +1,5 @@
+%h1 There long links became shorten
+%p Paste your link and submit
+= form_for :link , url: {action: "create"} do
+  = text_field :link, :full_link
+  = submit_tag
